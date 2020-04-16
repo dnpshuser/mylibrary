@@ -39,8 +39,8 @@ app.use("/", indexRouter);
 
 
 
-const PORT  = 3000;
+const port = process.env.PORT || 3000;
 
-app.listen(PORT , () => {
-    console.log(`listening to the port ${PORT}`);
+app.listen(port , () => {
+    console.log(`listening to the port ${prot}`);
 });
