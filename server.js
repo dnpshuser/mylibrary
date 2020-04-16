@@ -21,7 +21,7 @@ mongoose.connect(process.env.DATABASE_URL, {
      useNewUrlParser: true
 });
 
-    const db = mongoose.connection;
+    const db = mongoose.connection
     db.on("error", error => console.error(error))
     db.once("open", () => console.log("Connected to the Database...."));
 
@@ -39,8 +39,8 @@ app.use("/", indexRouter);
 
 
 
-const PORT = 3000;
+const port  = 3000;
 
-app.listen(PORT , () => {
-    console.log(`listening to the port ${PORT}`);
+app.listen(process.env.PORT || 3000 , () => {
+    console.log(`listening to the port ${process.env.PORT || 3000}`);
 });
