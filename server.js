@@ -1,5 +1,7 @@
+if( process.env.NODE_ENV != 'production') {
     require('dotenv').config();    
-
+}
+   
     
 
 
@@ -39,7 +41,7 @@ app.use("/", indexRouter);
 
 
 
-const port = process.env.PORT || 3000;
+const port = 3000;
 
 app.listen(port , () => {
     console.log(`listening to the port ${prot}`);
