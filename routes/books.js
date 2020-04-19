@@ -64,7 +64,8 @@ router.post('/', async (req,res) => {
     try {
         const newBook = await book.save()
         res.redirect(`authors/${newBook.id}`)
-    } catch {
+    } catch (err) {
+        console.log(err);
        
         renderNewPage(res,book, true)
     }
